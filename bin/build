@@ -8,8 +8,7 @@ function indent() {
 	esac
 }
 
-ENV_DIR=${3:-}
-ssh_key="$(cat $ENV_DIR/SSH_KEY)"
+ssh_key="$SSH_KEY"
 ssh_hosts=${SSH_HOSTS:-"git@github.com"}
 
 if [ "$ssh_key" != "" ]; then
